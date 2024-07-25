@@ -1,0 +1,10 @@
+*.pem
+terraform.tfstate
+terraform.tfstate*
+.terraform*
+.DS_Store
+.infracost
+.tflint.hcl
+practica_secret/
+.vscode
+*.txt
