@@ -14,4 +14,6 @@ Como se compone la estructura del codigo. El codigo se llama HCL
 > El tipo de bloque y el tipo de recursos son palabras reservadas de Terraform, pero el nombre del recurso puede ser cualquiera. `resource` y `local_file` pertenecen al lenguaje de manera reservada.
 
 ## ARGUMENTOS:
-(Depende cada tipo de recurso, los argumentos varian) ::: BIBLIA PARA CONSULTAR ESTRUCTURAS ==> [https://registry.terraform.io](https://registry.terraform.io)
+(Depende cada tipo de recurso, los argumentos varian)
+
+ BIBLIA PARA CONSULTAR ESTRUCTURAS ==> [https://registry.terraform.io](https://registry.terraform.io)
