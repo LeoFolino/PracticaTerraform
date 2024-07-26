@@ -2,7 +2,7 @@
 
 Como se compone la estructura del codigo. El codigo se llama HCL
 
-![Estructura](/MiPracticaTerraform/Sección%20Principal/capturas/HCL - Hashicorp Configuration Language - Declarative.jpg)
+![Estructura](/MiPracticaTerraform/Sección%20Principal/capturas/HCL-Hashicorp-Configuration-Language-Declarative.jpg)
 
 TIPO DE BLOQUE:
 "resource"      -->     El primer elemento es el tipo de bloque llamado resource o recurso: Aca vamos a crear de manera declarativa los recurso que queremos deployar (Instancias, VPC, Subnets, etc).
