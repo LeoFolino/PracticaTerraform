@@ -23,6 +23,7 @@ Como se compone la estructura del codigo. El codigo se llama HCL
 Es importante aclarar que **NO HAY** nombres reservados para nombrar archivos en Terraform.
 
 El primer código que se ejecutó es:
+
 ´´´hcl
 resource "local_file" "productos" {
 
