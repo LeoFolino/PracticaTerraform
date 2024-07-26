@@ -17,3 +17,16 @@ Como se compone la estructura del codigo. El codigo se llama HCL
 (Depende cada tipo de recurso, los argumentos varian)
 
  BIBLIA PARA CONSULTAR ESTRUCTURAS ==> [https://registry.terraform.io](https://registry.terraform.io)
+
+ # PRIMER CODIGO (Practica 1)
+
+Es importante aclarar que **NO HAY** nombres reservados para nombrar archivos en Terraform.
+
+El primer código que se ejecutó es:
+´´´
+resource "local_file" "productos" {
+
+    content = "Lista de productos"
+    filename = "productos.txt"
+}
+´´´
