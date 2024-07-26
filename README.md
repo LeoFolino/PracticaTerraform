@@ -29,3 +29,8 @@ resource "local_file" "productos" {
     content = "Lista de productos"
     filename = "productos.txt"
 }
+
+Para ejecutarlo, se debe utilizar: 
+`terraform init` 
+>Si anteriormente no se inició terraform en el directorio. Este comando va a descargar el provider necesario para deployar el codigo. Esto lo determina por el tipo de bloque de codigo que tenemos
+![terraforminit](/MiPracticaTerraform/Practica1/Capturas/init.jpg)
