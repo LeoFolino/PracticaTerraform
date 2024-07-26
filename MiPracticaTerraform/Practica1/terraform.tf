@@ -25,3 +25,6 @@ resource "local_file" "productos" {
 }
 
 # Luego hacemos un terraform plan, vamos a ver que nos avisa que va a destruir el archivo y lo va a volver a crear, ya que no puede cambiar o editar el contenido del archivo mismo
+
+# Si tenemos que eliminar, tenemos el comando
+# terraform destroy
