@@ -28,7 +28,7 @@ El primer código que se ejecutó es:
 resource "local_file" "productos" {
     content = "Lista de productos"
     filename = "productos.txt"
-}
+}```
 
 Para ejecutarlo, se debe utilizar: 
 `terraform init` 
