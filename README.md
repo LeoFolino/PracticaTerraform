@@ -61,6 +61,7 @@ resource "local_file" "productos" {
 Luego del cambio en el codigo, ejecutamos `terraform plan` y validamos la informacion que nos brinda
 ![terraformplanchange](/MiPracticaTerraform/Practica1/Capturas/plan-change.jpg)
 >Se puede observar que nos esta avisando, que va a destruir el archivo y lo va a volver a crear, ya que no tiene posibilidad de cambiar o editar el contenido del mismo
+Con un `terraform apply` y aceptando el cambio, va a realizar este proceso indicado
 
 Si tenemos que eliminarlo, contamos con el comando:
 `terraform destroy`
