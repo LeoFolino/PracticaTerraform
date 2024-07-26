@@ -1,0 +1,19 @@
+*IaC orientado a la configuración:
+
+    - Instalar y gestionar software (aprovisionamiento de servidores)
+    - Nos permite mantener un estandar en nuestros servidores
+    - Podemos tener un control de versiones de nuestros despliegues
+
+*IaC orientado a servidores:
+    - Nos permite tener pre-instalado el software y las dependencias necesarias
+    - Funciona tanto para VM como para contenedores
+    - Infraestructura Inmutable (Una vez deployado estos contenedores, estos no son mutables una vez esten ejecutados. Si hay que hacer un cambio se debe crear una nueva imagen.)
+
+*IaC para aprovisionamiento:
+    - Infraestructura como codigo DECLARATIVO (Decimos que queremos deployar)
+    - Aprovisionar recursos INMUTABLES en nuestra Infraestructura
+    - Toda clase de recursos como instancias, bases de datos, buckets, vpc, ejecutados
+    - Podemos deplyoar infraestructura en multiples providers (TERRAFORM)
+
+Terraform > CloudFormation porque Terraform es agnostico
+
