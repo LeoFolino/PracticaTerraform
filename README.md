@@ -49,3 +49,20 @@ Para llevar a cabo el deployment se ejecuta:
 >Este apply de fondo crea un plan y lo vuelve a presentar, NO SE BASA LO PRESENTADO CON EL COMANDO "terraform plan", al indicar **yes** avanza con la ejecución
 ![terraformapply](/MiPracticaTerraform/Practica1/Capturas/apply.jpg)
 ![terraformapplyok](/MiPracticaTerraform/Practica1/Capturas/apply-complete.jpg)
+
+Si quisiera llevar a cabo un cambio, se debe realizar en el codigo:
+```hcl
+resource "local_file" "productos" {
+    content = "Lista de productos para el mes proximo"
+    filename = "productos.txt"
+}
+```
+
+Luego del cambio en el codigo, ejecutamos `terraform plan` y validamos la informacion que nos brinda
+![terraformplanchange](/MiPracticaTerraform/Practica1/Capturas/plan-change.jpg)
+>Se puede observar que nos esta avisando, que va a destruir el archivo y lo va a volver a crear, ya que no tiene posibilidad de cambiar o editar el contenido del mismo
+
+Si tenemos que eliminarlo, contamos con el comando:
+`terraform destroy`
+![terraformdestroy](/MiPracticaTerraform/Practica1/Capturas/destroy.jpg)
+![terraformdestroyok](/MiPracticaTerraform/Practica1/Capturas/destroy-yes.jpg)
