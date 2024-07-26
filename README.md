@@ -37,9 +37,15 @@ Para ejecutarlo, se debe utilizar:
 ![terraforminit](/MiPracticaTerraform/Practica1/Capturas/init.jpg)
 
 
-Acto seguido, se debe ejecutar
+Acto seguido, se debe ejecutar:
 `terraform plan`
 >Este comando va a generar un plan en base a nuestro codigo y va a presentarlo indicando las acciones que va a realizar.
 >Indica que lo que va a crear se visualiza con un + en verde y va a realizar la lista de acciones descriptas
 >Si bien utilizamos content y filename, hay mas parámetros. 
 ![terraformplan](/MiPracticaTerraform/Practica1/Capturas/plan.jpg)
+
+Para llevar a cabo el deployment se ejecuta:
+`terraform apply`
+>Este apply de fondo crea un plan y lo vuelve a presentar, NO SE BASA LO PRESENTADO CON EL COMANDO "terraform plan", al indicar **yes** avanza con la ejecución
+![terraformapply](/MiPracticaTerraform/Practica1/Capturas/apply.jpg)
+![terraformapplyok](/MiPracticaTerraform/Practica1/Capturas/apply-complete.jpg)
