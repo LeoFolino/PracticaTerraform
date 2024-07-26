@@ -24,9 +24,8 @@ Es importante aclarar que **NO HAY** nombres reservados para nombrar archivos en
 
 El primer código que se ejecutó es:
 
-´´´hcl
+```hcl
 resource "local_file" "productos" {
-
     content = "Lista de productos"
     filename = "productos.txt"
 }
