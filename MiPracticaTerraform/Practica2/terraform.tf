@@ -43,3 +43,8 @@
 
 # Es importante balancear, no es bueno tener todo en un solo archivo .tf ni tampoco 100 archivos .tf para cada cosa // Luego de este punto dividimos el código de la manera mencionada
 # >Se crean los archivos local_file.tf que va a contener dicho resource, y lo mismo con random_string.tf
+
+# El nombre del recurso debe ser unico y no repetible para que genere la cantidad de recursos que estamos definiendo. Por ese se procede a agregar producto-1 producto-2 producto-3 etc en cada nombre del recurso local_file
+# Se cambia el nombre del recurso random_string al igual que en local_file.tf. Ya que no puedo tener el mismo nombre de recurso para reiterados recursos.
+
+# Al ejecutar terraform apply y aceptar el cambio, se crean los 10 archivos correspondientes. Destruye los 2 anteriores, y crea los 5 local_file y los otros 5 random_string
