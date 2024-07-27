@@ -48,3 +48,6 @@
 # Se cambia el nombre del recurso random_string al igual que en local_file.tf. Ya que no puedo tener el mismo nombre de recurso para reiterados recursos.
 
 # Al ejecutar terraform apply y aceptar el cambio, se crean los 10 archivos correspondientes. Destruye los 2 anteriores, y crea los 5 local_file y los otros 5 random_string
+
+# Esta demostracion inicia el contepto DON'T REPEAT YOURSELF (DRY)
+# Se vuelve a dejar un solo bloque de recurso en random_string.tf y local_file.tf
