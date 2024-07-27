@@ -10,12 +10,12 @@
 # con el siguiente recurso, nos va a fallar, ya que no hicimos un terraform init cargando los plugins o
 # características necesarias para el provider 'random'
 
-resource "random_string" "sufijo" {
-  length           = 10
-  special          = true
-  override_special = "/@£$#%&"
-  upper = true
-}
+# resource "random_string" "sufijo" {
+#   length           = 10
+#   special          = true
+#   override_special = "/@£$#%&"
+#   upper = true
+# }
 
 # Por lo que luego de añadir un nuevo provider, se debe utilizar nuevamente terraform init
 
@@ -25,10 +25,10 @@ resource "random_string" "sufijo" {
 
 # Sin embargo, si yo quisiera añadir un sufijo a productos.txt lo que tengo que hacer, es anidar una variable llamando a este recurso de la siguiente manera
 
-resource "local_file" "productos" {
-    content = "Lista de productos para el mes proximo"
-    filename = "productos-${random_string.sufijo.id}.txt"
-}
+# resource "local_file" "productos" {
+#     content = "Lista de productos para el mes proximo"
+#     filename = "productos-${random_string.sufijo.id}.txt"
+# }
 
 # > Con esto estoy diciendo que el nombre va a ser productos-(resultado del recurso random_string).
 
