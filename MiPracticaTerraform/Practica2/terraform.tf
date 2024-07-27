@@ -1,4 +1,4 @@
-# PARA ESTA PRACTICA SE UTILIZARA EL PROVIDER "RANDOM" -- ES OTRO PROVIDER LOCAL
+# PARA ESTA PRACTICA SE UTILIZARA EL PROVIDER "RANDOM" -- ES OTRO PROVIDER LOCAL -- EVOLUCIONA EN local_file.tf y random_string.tf . Este codigo fue el inicial y forma parte del aprendizaje
 
 # resource "local_file" "productos" {
 #     content = "Lista de productos para el mes proximo"
