@@ -1,0 +1,42 @@
+# PARA ESTA PRACTICA SE UTILIZARA EL PROVIDER "RANDOM" -- ES OTRO PROVIDER LOCAL
+
+# resource "local_file" "productos" {
+#     content = "Lista de productos para el mes proximo"
+#     filename = "productos.txt"
+# }
+
+# Hasta la linea 7, si hacemos un terraform plan va a correr porque anteriormente con terraform init
+# realizó la carga de los plugins necesarios para el provider 'local', pero si intentamos ejecutar terraform plan
+# con el siguiente recurso, nos va a fallar, ya que no hicimos un terraform init cargando los plugins o
+# características necesarias para el provider 'random'
+
+resource "random_string" "sufijo" {
+  length           = 10
+  special          = true
+  override_special = "/@£$#%&"
+  upper = true
+}
+
+# Por lo que luego de añadir un nuevo provider, se debe utilizar nuevamente terraform init
+
+# ADJUNTAR terraform-init
+
+# > Se observa que va a utilizar la version hashicorp/local anterior descargada, por lo que no la va a volver a descargar, y va a avanzar con la descarga e instalacion de hashicorp/random
+
+# Sin embargo, si yo quisiera añadir un sufijo a productos.txt lo que tengo que hacer, es anidar una variable llamando a este recurso de la siguiente manera
+
+resource "local_file" "productos" {
+    content = "Lista de productos para el mes proximo"
+    filename = "productos-${random_string.sufijo.id}.txt"
+}
+
+# > Con esto estoy diciendo que el nombre va a ser productos-(resultado del recurso random_string).
+
+# Luego de ejecutar terraform plan y terraform apply, nos encontramos con un archivo llamado productos-LmRsXFPcCU.txt generado por el recurso random_string aplicado al recurso local_file
+
+### APLICACION DEL terraform show
+# ADJUNTAR terraform-show
+# > El terraform show nos va a mostrar los recursos que terraform implemento, al hacer un terraform destroy, terraform show no va a mostrar nada.
+
+# Terraform deploya a nivel directorio, que significa? Que todos los .tf que se encuentren en el directorio donde estoy disparando terraform init, terraform plan, terraform apply o terraform destroy,
+# van a formar parte de la ejecucion, por lo que puedo separar este archivo en dos partes, de tal manera que quede local_file.tf y random_string.tf 
