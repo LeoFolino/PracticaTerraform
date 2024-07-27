@@ -40,3 +40,6 @@ resource "local_file" "productos" {
 
 # Terraform deploya a nivel directorio, que significa? Que todos los .tf que se encuentren en el directorio donde estoy disparando terraform init, terraform plan, terraform apply o terraform destroy,
 # van a formar parte de la ejecucion, por lo que puedo separar este archivo en dos partes, de tal manera que quede local_file.tf y random_string.tf 
+
+# Es importante balancear, no es bueno tener todo en un solo archivo .tf ni tampoco 100 archivos .tf para cada cosa // Luego de este punto dividimos el código de la manera mencionada
+# >Se crean los archivos local_file.tf que va a contener dicho resource, y lo mismo con random_string.tf
