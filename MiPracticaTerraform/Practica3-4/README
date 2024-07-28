@@ -1,0 +1,10 @@
+Si tenemos un codigo terraform sin identar como en este ejemplo "/CAPTURA/terraformtf-sin-identar" , podemos utilizar el comando terraform fmt y va a proceder a identar todo de forma automatica
+/captura/terraformtf-identado
+
+Por otro lado, el comando terraform validate va a revisar el codigo y nos va a avisar si tenemos algo mal escrito y en donde.
+/captura/terraform-prevalidate
+terraform validate
+/captura/terraform-validate
+
+Es mejor que un terraform plan ya que normalmente solemos tener extremas lineas de codigo y el validate va a apuntar directamente en donde esta mal escrito.
+

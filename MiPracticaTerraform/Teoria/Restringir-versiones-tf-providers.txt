@@ -1,0 +1,12 @@
+En el codigo como se muestra, se define la version de aws y de terraform con la que se va a trabajar
+con el fin de que dentro de un equipo de trabajo todos utilicen las mismas versiones y asi no generar
+ningun tipo de problema
+
+Las contraints de terraform van de la siguiente manera
+
+TABLA
+version     Que hace
+0.15.0      Solo usa la v0.15.0
+>= 0.15     Solo va a usar v0.15.0 hasta la ultima version
+~> 0.15     Va a usar la v0.15 y todas sus versiones menores (0.15.0/0.15.1/0.15.2/0.15.3/etc)
+>= 0.15, <2.0.0     Va a usar de la version 0.15 hasta las mas nuevas, pero no mayores a la 2.0.0
