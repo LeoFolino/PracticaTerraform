@@ -14,3 +14,7 @@ resource "random_string" "sufijo" {
   special          = false
   upper            = false
 }
+
+# GUARDAR Y USAR UN PLAN:
+# terraform plan --out s3.plan // Genera el archivo s3.plan con las instrucciones guardadas para ejecutar terraform apply s3.plan /// CUANDO SE EJECUTA ESTO GENERA AUTOMATICAMENTE LOS RECURSOS
+# NO PREGUNTA SI SE DEBE DEPLOYAR O NO
