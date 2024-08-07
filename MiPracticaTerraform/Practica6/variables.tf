@@ -13,3 +13,8 @@ variable "private_subnet" {
   description = "CIDR private subnet"
   type = string
 }
+
+variable "tags" {
+  description = "Tags del proyecto"
+  type        = map(string)
+}
